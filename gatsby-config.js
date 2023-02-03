@@ -13,10 +13,21 @@ module.exports = {
   },
 }
 
-module.exports = {
-  plugins: [
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`, // Needed for dynamic images
-  ],
+import * as React from "react";
+import Layout from "../components/layout";
+import { StaticImage } from "gatsby-plugin-image";
+
+const IndexPage = () => {
+  return (
+    <Layout pageTitle="Home Page">
+      <p>What the hell?</p>
+      <StaticImage
+        src="../images/opossom.JPG"
+        alt="an opossum under a canoe"
+        placeholder="blurred"
+      />
+    </Layout>
+  )
 }
+
+export default IndexPage
